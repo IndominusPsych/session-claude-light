@@ -1,0 +1,14 @@
+{
+  "name": "session-claude-light",
+  "description": "Claude Light: a desktop traffic light for your Claude Code sessions.",
+  "owner": {
+    "name": "IndominusPsych"
+  },
+  "plugins": [
+    {
+      "name": "session-claude-light",
+      "source": "./",
+      "description": "Always-on-top traffic light showing whether each Claude Code session is working (green) or waiting for you (red)."
+    }
+  ]
+}

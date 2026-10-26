@@ -1,0 +1,23 @@
+# Personal Claude Code settings (use settings.example.json as the template)
+settings.json
+settings.local.json
+.claude/
+
+# Runtime state and logs (normally written to ~/.claude, ignored here just in case)
+claude_lights/
+*.log
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

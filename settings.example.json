@@ -1,0 +1,63 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/claude_light.py launch" }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/claude_light.py set running" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/claude_light.py set running" }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "AskUserQuestion|ExitPlanMode",
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/claude_light.py set waiting" }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/claude_light.py set waiting" }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/claude_light.py set waiting" }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/claude_light.py set waiting" }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/claude_light.py quit" }
+        ]
+      }
+    ]
+  }
+}
